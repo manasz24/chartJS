@@ -1,0 +1,24 @@
+<template>
+   <lightning-layout multiplle-rows>
+       <lightning-layout-item size="6" padding="around-small">
+           <lightning-card title="total opportunnities">
+                   <template if:true={piechartLabels.length}>
+                    <c-charts type="doughnut" 
+                    chart-heading="opportunities"
+                    chart-data={piechartData}
+                    chart-labels={piechartLabels}></c-charts>
+                </template> 
+           </lightning-card>
+       </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+            <lightning-card title="total opportunnities 1">
+                <template if:true={piechartLabels.length}>
+                    <c-charts type="bar" 
+                    chart-heading="opportunities"
+                    chart-data={piechartData}
+                    chart-labels={piechartLabels}></c-charts>
+                </template> 
+       </lightning-card>
+            </lightning-layout-item>
+   </lightning-layout> 
+</template>
